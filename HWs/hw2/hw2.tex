@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{LA-HW1}
+\author{Zahra Rafati}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section*{Question 1}
+\(\mathbf{S}\) is a strict subspace of \(\mathbb{R}^n\), \(\xrightarrow{}\) its 
+columns are linearly dependent, \(\xrightarrow{}\) the number of
+independent columns is less than \(n\), \(\xrightarrow{}\) the 
+number of its bases is less than \(n\).
+
+\section*{Question 2}
+\(\mathbf{D}\) scales each column \(\mathbf{a}_i\) by \(d_i\):
+\[
+\mathbf{A}\mathbf{D} = 
+\begin{bmatrix} 
+d_1 \mathbf{a}_1 & \cdots & d_n \mathbf{a}_n
+\end{bmatrix}.
+\]
+
+\[
+\mathbf{B}^T = 
+\begin{bmatrix}
+\mathbf{b}_1^T \\ 
+\vdots \\ 
+\mathbf{b}_n^T
+\end{bmatrix}.
+\]
+
+\((\mathbf{A}\mathbf{D}\mathbf{B}^T)_{ij} = d_i \mathbf{a}_i \cdot (\text{j-th column of } \mathbf{B}^T)\).
+
+\[
+\mathbf{A}\mathbf{D}\mathbf{B}^T = \sum_{i=1}^n d_i \mathbf{a}_i \mathbf{b}_i^T.
+\]
+
+\section*{Question 3}
+\[
+\mathbf{x} \in \mathcal{C}(\mathbf{A}\mathbf{B}) \implies \exists \mathbf{y} : \mathbf{A}\mathbf{B}\mathbf{y} = \mathbf{x} \implies \mathbf{A}\mathbf{z} = \mathbf{x}, \text{ where } \mathbf{z} = \mathbf{B}\mathbf{y}.
+\]
+
+\[
+\mathbf{A}\mathbf{z} = \mathbf{x} \implies \mathbf{x} \in \mathcal{C}(\mathbf{A}).
+\]
+
+\section*{Question 4}
+\[
+\mathbf{x} \in \mathcal{C}(\mathbf{A}\mathbf{B}) \implies \exists \mathbf{y} : \mathbf{A}\mathbf{B}\mathbf{y} = \mathbf{x} \implies \mathbf{A}\mathbf{z} = \mathbf{x}, \text{ where } \mathbf{z} = \mathbf{B}\mathbf{y}.
+\]
+
+\[
+\mathbf{x} \in \mathcal{C}(\mathbf{A}) \implies \mathcal{C}(\mathbf{A}\mathbf{B}) \subseteq \mathcal{C}(\mathbf{A}) \quad \text{(I)}.
+\]
+
+\[
+\mathbf{x} \in \mathcal{C}(\mathbf{A}) \implies \exists \mathbf{y} : \mathbf{A}\mathbf{y} = \mathbf{x}, \quad \mathbf{B} \text{ is invertible}.
+\]
+
+\[
+\mathbf{A}(\mathbf{B}\mathbf{B}^{-1})\mathbf{y} = \mathbf{x} \implies \mathbf{A}\mathbf{B}(\mathbf{B}^{-1}\mathbf{y}) = \mathbf{x} \implies \mathbf{A}\mathbf{B}\mathbf{z} = \mathbf{x}, \text{ where } \mathbf{z} = \mathbf{B}^{-1}\mathbf{y}.
+\]
+
+\[
+\mathbf{x} \in \mathcal{C}(\mathbf{A}\mathbf{B}) \implies \mathcal{C}(\mathbf{A}) \subseteq \mathcal{C}(\mathbf{A}\mathbf{B}) \quad \text{(II)}.
+\]
+
+Combining (I) and (II), we conclude:
+\[
+\mathcal{C}(\mathbf{A}) = \mathcal{C}(\mathbf{A}\mathbf{B}).
+\]
+
+\section*{Question 5}
+\[
+\mathbf{x} \in \mathcal{C}(\mathbf{A}) \implies \exists \mathbf{y} : \mathbf{A}\mathbf{y} = \mathbf{x}.
+\]
+
+Since \(\text{rank}(\mathbf{B}) = n\) and \(\mathbf{y} \in \mathbb{R}^n\), we can write:
+\[
+\mathbf{y} = \mathbf{B}\mathbf{z} \implies \mathbf{A}\mathbf{y} = \mathbf{A}\mathbf{B}\mathbf{z} = \mathbf{x}.
+\]
+
+\[
+\mathbf{x} \in \mathcal{C}(\mathbf{A}\mathbf{B}) \implies \mathcal{C}(\mathbf{A}) \subseteq \mathcal{C}(\mathbf{A}\mathbf{B}) \quad \text{(I)}.
+\]
+
+\[
+\mathbf{x} \in \mathcal{C}(\mathbf{A}\mathbf{B}) \implies \exists \mathbf{y} : \mathbf{A}\mathbf{B}\mathbf{y} = \mathbf{x}, \text{ where } \mathbf{z} = \mathbf{B}\mathbf{y}.
+\]
+
+\[
+\mathbf{A}\mathbf{z} = \mathbf{x} \implies \mathbf{x} \in \mathcal{C}(\mathbf{A}) \implies \mathcal{C}(\mathbf{A}\mathbf{B}) \subseteq \mathcal{C}(\mathbf{A}) \quad \text{(II)}.
+\]
+
+From (I) and (II), we conclude:
+\[
+\mathcal{C}(\mathbf{A}) = \mathcal{C}(\mathbf{A}\mathbf{B}).
+\]
+
+\end{document}

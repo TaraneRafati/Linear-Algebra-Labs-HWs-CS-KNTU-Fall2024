@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{LA-HW6}
+\author{Zahra Rafati}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section*{Question 1}
+Using the singular value decomposition (SVD) of a matrix $A$, we have:
+\[
+\det(A) = \det(U) \det(\Sigma) \det(V^T),
+\]
+where $U$ and $V$ are orthogonal matrices, and $\Sigma$ is the diagonal matrix of singular values.
+
+Since $\det(V^T) = \det(V)$:
+\[
+\det(A) = \det(U) \det(\Sigma) \det(V).
+\]
+
+Now, consider $\det(\Sigma) > 0$ (as the singular values are positive). The sign of $\det(A)$ is determined by the product:
+\[
+\text{sign}(\det(A)) = \text{sign}(\det(U) \det(V)).
+\]
+
+Since $\det(U)$ and $\det(V)$ are either $+1$ or $-1$ (as $U$ and $V$ are orthogonal):
+\[
+\det(U) \det(V) = \pm 1.
+\]
+
+Thus:
+\[
+\text{sign}(\det(U) \det(V)) = \text{sign}(\det(A)).
+\]
+
+
+\section*{Question 2}
+The eigenvalue decomposition of a symmetric matrix $A$ is given by:
+\[
+A = V \Lambda V^T,
+\]
+where $\Lambda = \text{diag}(\lambda_1, \dots, \lambda_n)$ and all $\lambda_i > 0$ if $A$ is positive definite.
+
+The singular value decomposition (SVD) of $A$ is:
+\[
+A = U \Sigma V^T.
+\]
+
+If $A$ is symmetric, then $U = V$. 
+
+The matrix $\Sigma$ represents the singular values of $A$. For symmetric positive definite matrices, the singular values are the square roots of the eigenvalues of $A^T A$ or $A^2$.
+
+If $A$ is positive definite, the eigenvalues of $A$ are positive. Thus:
+\[
+\text{Singular values } = \text{ Eigenvalues.}
+\]
+
+In conclusion:
+\[
+A = U \Sigma V^T = V \Lambda V^T, \quad \Sigma = \Lambda, \quad U = V.
+\]
+
+
+\section*{Question 3}
+The eigenvalue decomposition of $A$ is given by:
+\[
+A = V \Lambda V^T,
+\]
+where $\Lambda = \text{diag}(\lambda_1, \dots, \lambda_n)$.
+
+The singular value decomposition (SVD) adjusts $\Lambda$ to include absolute values of eigenvalues:
+\[
+\Sigma = \text{diag}(|\lambda_1|, \dots, |\lambda_n|).
+\]
+
+If $\lambda_i < 0$, then the corresponding eigenvector $\mathbf{v}_i$ is adjusted to $-\mathbf{v}_i$ in $V$ to ensure positivity in $\Sigma$.
+
+The adjusted matrices $U$ and $V$ are used in the SVD representation:
+\[
+A = U \Sigma V^T.
+\]
+
+
+\section*{Question 4}
+Let $B = P A Q$, where $P^T P = I$ and $Q^T Q = I$. Then:
+\[
+B^T B = (P A Q)^T (P A Q) = Q^T A^T P^T P A Q.
+\]
+
+Since $P^T P = I$, we have:
+\[
+B^T B = Q^T A^T A Q.
+\]
+
+Here, $Q$ is orthogonal, so the eigenvalues of $B^T B$ are equal to the eigenvalues of $A^T A$.
+
+The singular values of $B$ are the square roots of the eigenvalues of $B^T B$. Therefore:
+\[
+\text{Singular values of } B = \text{Singular values of } A.
+\]
+
+
+
+
+
+
+
+
+\end{document}

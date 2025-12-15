@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{LA-HW3}
+\author{Zahra Rafati}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section*{Question 1}
+\[
+\mathtt{A} \mathbf{x} = \mathbf{b} \quad \rightarrow \quad \mathbf{x} = \{ \mathbf{x}_p + \mathbf{x}_n \mid \mathbf{x}_n \in \mathcal{N}(\mathtt{A}) \}
+\]
+
+\[
+\text{rank}(\mathtt{A}) = m
+\]
+
+\[
+\dim(\mathcal{N}(\mathtt{A})) = n - \text{rank}(\mathtt{A}) = n - m
+\]
+
+\[
+\mathtt{A} \in \mathbb{R}^{m \times n}, \, m < n \quad \rightarrow \quad n - m > 0
+\]
+
+\[
+\text{there are infinite vectors in } \mathcal{N}(\mathtt{A})
+\]
+
+\[
+\mathbf{x} = \mathbf{x}_p + \mathbf{x}_n \quad \text{forms an infinite set.}
+\]
+
+\section*{Question 2}
+
+\[
+\text{rank}(\mathtt{A}) = n
+\]
+
+\[
+m > n \quad \rightarrow \quad \text{more rows than columns} \quad \rightarrow \quad \mathtt{A} \text{ is overdetermined.}
+\]
+
+\[
+\text{If } \mathbf{b} \notin \mathcal{C}(\mathtt{A}) \quad \rightarrow \quad \text{no solution for } \mathbf{b} \quad (\text{I})
+\]
+
+\[
+\text{If } \mathbf{b} \in \mathcal{C}(\mathtt{A}) \quad \rightarrow \quad \exists \, \mathbf{x} : \mathtt{A} \mathbf{x} = \mathbf{b} 
+\]
+
+\[
+\mathcal{N}(\mathtt{A}) = \{\mathbf{0}\} \quad \rightarrow \quad \mathbf{x} = \mathbf{x}_p \quad \rightarrow \quad \text{only one solution for } \mathbf{b} \quad (\text{II})
+\]
+
+\section*{Question 3}
+
+\[
+\text{rank}(\mathtt{A}) < \min(m, n)
+\]
+
+\[
+\mathcal{N}(\mathtt{A}) = n - \text{rank}(\mathtt{A}) > 0
+\]
+
+\[
+\mathbf{b} \in \mathbb{R}^m, \quad \text{and } \text{rank}(\mathtt{A}) \leq m, \quad \text{if:}
+\]
+
+\[
+\mathbf{b} \notin \mathcal{C}(\mathtt{A}) \quad \rightarrow \quad \mathbf{b} \text{ has no solution} \quad (\text{I})
+\]
+
+\[
+\mathbf{b} \in \mathcal{C}(\mathtt{A}) \quad \rightarrow \quad \exists \, \mathbf{x}_p : \mathtt{A} \mathbf{x}_p = \mathbf{b} \quad \text{and}
+\]
+
+\[
+\mathcal{N}(\mathtt{A}) > 0 \quad \rightarrow \quad \mathbf{x} = \mathbf{x}_p + \mathbf{x}_n \quad \rightarrow \quad \mathbf{b} \text{ has infinite solutions} \quad (\text{II})
+\]
+
+\section*{Question 4}
+
+\subsection*{(a)}
+
+We know that \( S \) is a linear subspace if:
+
+1. Contains the zero vector. \\
+2. Closed under addition. \\
+3. Closed under scalar multiplication.
+
+\[
+\mathbf{b} = \mathbf{0} \quad \rightarrow \quad \mathtt{A} \mathbf{x} = \mathbf{0} \quad \rightarrow \quad S = \mathcal{N}(\mathtt{A}) \quad \rightarrow
+\]
+\[
+\text{Null space is a linear subspace.} \quad \rightarrow \quad S \text{ is a linear subspace } (\text{I})
+\]
+
+\[
+\mathbf{b} \neq \mathbf{0} \quad \rightarrow \quad \mathtt{A} \mathbf{x} = \mathbf{b} \quad \rightarrow \quad S = \{ \mathbf{x}_p + \mathbf{x}_n \mid \mathbf{x}_n \in \mathcal{N}(\mathtt{A}) \}
+\]
+
+If \( \mathbf{0} \notin S \), then \( \mathtt{A}(\mathbf{0}) = \mathbf{b} \quad \not\Leftrightarrow \quad \mathbf{0} = \mathbf{b} \) \quad (\text{II})
+
+\( S \) is nonempty \(\rightarrow\) \( \mathtt{A} \mathbf{x}_p = \mathbf{b} \)
+
+Consider \( \mathbf{y} = \mathbf{x}_p \):
+\[
+\{ \mathbf{z} - \mathbf{y} \mid \mathbf{z} \in S \} = \{ \mathbf{z} - \mathbf{x}_p \mid \mathbf{z} \in S \}
+\]
+
+We know that \( \mathbf{z} \in S \rightarrow \mathbf{z} = \mathbf{x}_p + \mathbf{x}_n \):
+
+\[
+\{ \mathbf{z} - \mathbf{x}_p \mid \mathbf{z} \in S \} = \{ (\mathbf{x}_p + \mathbf{x}_n) - \mathbf{x}_p \mid \mathbf{x}_n \in \mathcal{N}(\mathtt{A}) \}
+\]
+
+\[
+= \{ \mathbf{x}_n \mid \mathbf{x}_n \in \mathcal{N}(\mathtt{A}) \} \rightarrow \mathbf{x}_n \in \mathcal{N}(\mathtt{A})
+\]
+\( \mathbf{0} \notin S \), then \( \mathtt{A}(\mathbf{0}) = \mathbf{b} \quad \not\Leftrightarrow \quad \mathbf{0} = \mathbf{b} \) \quad (\text{II})
+
+\subsection*{(b)}
+
+\( S \) is nonempty \(\rightarrow\) \( \mathtt{A} \mathbf{x}_p = \mathbf{b} \)
+
+Consider \( \mathbf{y} = \mathbf{x}_p \):
+\[
+\{ \mathbf{z} - \mathbf{y} \mid \mathbf{z} \in S \} = \{ \mathbf{z} - \mathbf{x}_p \mid \mathbf{z} \in S \}
+\]
+
+We know that \( \mathbf{z} \in S \rightarrow \mathbf{z} = \mathbf{x}_p + \mathbf{x}_n \):
+
+\[
+\{ \mathbf{z} - \mathbf{x}_p \mid \mathbf{z} \in S \} = \{ (\mathbf{x}_p + \mathbf{x}_n) - \mathbf{x}_p \mid \mathbf{x}_n \in \mathcal{N}(\mathtt{A}) \}
+\]
+
+\[
+= \{ \mathbf{x}_n \mid \mathbf{x}_n \in \mathcal{N}(\mathtt{A}) \} \rightarrow \mathbf{x}_n \in \mathcal{N}(\mathtt{A})
+\]
+
+\section*{Question 5}
+
+\[
+\mathtt{A} \mathtt{A}^T = (\mathcal{C}(\mathtt{R})(\mathcal{C}\mathtt{A}))^T = \mathcal{C}(\mathtt{R} \mathtt{R}^T) \mathcal{C}^T
+\]
+
+\[
+\mathcal{C}(\mathtt{A} \mathtt{A}^T) = \mathcal{C}(\mathcal{C}(\mathtt{R} \mathtt{R}^T) \mathcal{C}^T)
+\]
+
+\[
+\mathtt{R} \mathtt{R}^T \in \mathbb{R}^{r \times r} \quad \rightarrow \quad \mathtt{R} \text{ is square and full row rank.}
+\]
+
+\[
+\rightarrow \mathcal{C}(\mathcal{C}(\mathtt{R} \mathtt{R}^T) \mathcal{C}^T) \subseteq \mathcal{C}(\mathcal{C}) \quad (\text{I})
+\]
+
+\[
+\mathcal{C} \text{ has full column rank.} \quad \rightarrow \quad \mathcal{C}(\mathtt{A}) = \mathcal{C}(\mathcal{C}) \quad (\text{II})
+\]
+
+\[
+\mathcal{C}(\mathtt{A}) = \mathcal{C}(\mathtt{A} \mathtt{A}^T)
+\]
+
+\section*{Question 6}
+
+\[
+\mathcal{C}(\mathtt{A}) \subseteq \mathcal{C}(\mathtt{A} \mathtt{A}^T) \quad \rightarrow \quad \text{rank}(\mathtt{A}) = \text{rank}(\mathtt{A} \mathtt{A}^T) \quad (\text{I})
+\]
+
+\[
+\mathcal{C}(\mathtt{A}^T) \subseteq \mathcal{C}(\mathtt{A}^T \mathtt{A}) \quad \rightarrow \quad \text{rank}(\mathtt{A}^T) = \text{rank}(\mathtt{A}^T \mathtt{A})
+\]
+
+\[
+\text{rank}(\mathtt{A}) = \text{rank}(\mathtt{A}^T) \quad \rightarrow \quad \text{rank}(\mathtt{A}^T) = \text{rank}(\mathtt{A}^T \mathtt{A}) \quad (\text{II})
+\]
+
+Combining (I) and (II):
+\[
+\text{rank}(\mathtt{A}) = \text{rank}(\mathtt{A} \mathtt{A}^T) = \text{rank}(\mathtt{A}^T \mathtt{A})
+\]
+
+\section*{Question 7}
+
+\[
+\mathtt{A} = \mathtt{C} \mathtt{R} \quad \rightarrow \quad \mathtt{A} \mathbf{x} = \mathtt{C} \mathtt{R} \mathbf{x}
+\]
+
+\[
+\mathtt{A} \mathbf{x} = \mathbf{0} \quad \rightarrow \quad \mathcal{C}(\mathtt{R} \mathbf{x}) = \mathbf{0}
+\]
+
+\[
+\mathtt{C} \text{ has full column rank } \rightarrow \text{ if } \mathcal{C}(\mathtt{R} \mathbf{x}) = \mathbf{0},
+\]
+then \( \mathtt{R} \mathbf{x} = \mathbf{0} \), \( \text{null}(\mathtt{A}) \subseteq \text{null}(\mathtt{R}) \quad (\text{I}) \)
+
+\[
+\mathtt{R} \mathbf{x} = \mathbf{0} \quad \rightarrow \quad \mathtt{C} \mathtt{R} \mathbf{x} = \mathbf{C} (\mathbf{0}) = \mathbf{0} \quad \rightarrow \quad \mathtt{A} \mathbf{x} = \mathbf{0}
+\]
+
+\[
+\text{null}(\mathtt{C} \mathtt{R}) \subseteq \text{null}(\mathtt{A}) \quad (\text{II})
+\]
+
+Combining (I) and (II):
+\[
+\text{null}(\mathtt{A}) = \text{null}(\mathtt{R})
+\]
+
+
+\end{document}

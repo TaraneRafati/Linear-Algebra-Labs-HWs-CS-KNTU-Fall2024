@@ -1,0 +1,366 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\title{LA-HW1}
+\author{Zahra Rafati}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Question 1}
+\begin{enumerate}
+    \item[(a)] \(\mathbf{z} + \mathbf{u} \stackrel{1}{=} \mathbf{u} + \mathbf{z} 
+                \stackrel{3}{=} \mathbf{u}\).
+    
+    \item[(b)] Consider there exists a \(\mathbf{w}\) such that \(\mathbf{u} + \mathbf{w} 
+                = \mathbf{u}\) for every \(\mathbf{u} \in \mathbf{V}\).\\
+                \(\mathbf{u} + \mathbf{w} = \mathbf{u} \xrightarrow{\mathbf{u} = \mathbf{z}} 
+                \mathbf{z} + \mathbf{w} = \mathbf{z} \stackrel{1}{=} \mathbf{w} + 
+                \mathbf{z} \stackrel{3}{=} \mathbf{w}\).\\
+                Therefore, \(\mathbf{z} = \mathbf{w}\).
+
+    \item[(c)] \(\mathbf{z'} = \mathbf{w} \xrightarrow{+ \mathbf{z}} 
+                \mathbf{z} + \mathbf{z'} = \mathbf{z} + \mathbf{w}\).\\
+                \(\mathbf{z} + \mathbf{z'} \stackrel{4}{=} \mathbf{z}\).\\
+                \(\mathbf{z} + \mathbf{w} \stackrel{a}{=} \mathbf{w}\).\\
+                Thus, \(\mathbf{z} = \mathbf{w}\).
+
+    \item[(d)] \(\mathbf{u} + \mathbf{w} = \mathbf{z} \stackrel{4}{=} \mathbf{u} + \mathbf{u'} 
+                \xrightarrow{+ \mathbf{u}^{-1}} \mathbf{u'} + \mathbf{u} + \mathbf{w} 
+                = \mathbf{u'} + \mathbf{u} + \mathbf{u'}\).\\
+                Using (4, 1), \(\mathbf{z} + \mathbf{w} = \mathbf{z} + \mathbf{u'} 
+                \xrightarrow{a} \mathbf{z} = \mathbf{u'}\).
+
+    \item[(e)] \(\mathbf{u} + 0\mathbf{u} \stackrel{5}{=} 1\mathbf{u} + 0\mathbf{u} 
+                \stackrel{8}{=} (1+0)\mathbf{u} = 1\mathbf{u} \stackrel{5}{=}
+                \mathbf{u} \xrightarrow{\text{3b}} 0\mathbf{u} = \mathbf{z}\).
+
+    \item[(f)] \(a\mathbf{z} \stackrel{e}{=} a(0\mathbf{u}) \stackrel{6}{=} 
+                (a0)\mathbf{u} = 0\mathbf{u} \stackrel{e}{=} \mathbf{z}\).
+
+    \item[(g)] \(0\mathbf{u} = (1-1)\mathbf{u} = 1\mathbf{u} + (-1)\mathbf{u} 
+                = \mathbf{u} + (-1)\mathbf{u}\).\\
+                \(\mathbf{z} = \mathbf{u} + \mathbf{u}^{-1}\).\\
+                \(0\mathbf{u} = \mathbf{z} \xrightarrow{} 
+                \mathbf{u} + \mathbf{u}^{-1} = \mathbf{u} + (-1)\mathbf{u} 
+                \xrightarrow{d} \mathbf{u}^{-1} = (-1)\mathbf{u}\).
+\end{enumerate}
+
+\section*{Question 2}
+Let
+\[
+\mathbf{A} \mathbf{x} = \mathbf{z}, \quad \text{where } \mathbf{A} = 
+\begin{bmatrix}
+a_1 & a_2 & \cdots & a_n
+\end{bmatrix}, \quad \mathbf{x} = 
+\begin{bmatrix}
+x_1 \\ \vdots \\ x_n
+\end{bmatrix}.
+\]
+
+\[
+\mathbf{A} \mathbf{x} = x_1 \mathbf{a}_1 + x_2 \mathbf{a}_2 + \cdots + x_n \mathbf{a}_n.
+\]
+
+If \(\mathbf{a}_k = \mathbf{a}_k + 0\), then
+\[
+\mathbf{a}_k = \mathbf{a}_k + x_1 \mathbf{a}_1 + \cdots + x_n \mathbf{a}_n \implies x_1 \mathbf{a}_1 + \cdots + (x_k + 1)\mathbf{a}_k + \cdots + x_n \mathbf{a}_n = \mathbf{A} \mathbf{x'}.
+\]
+
+The problem states that for every \(\mathbf{x}\), the equation \(\mathbf{A} \mathbf{x} = 0\) holds. Therefore, we constructed a new \(\mathbf{x}\):
+\[
+\mathbf{A} \mathbf{x'} = 0 \implies \mathbf{a}_k = 0 \implies \mathbf{A} = \mathbf{0}_{m \times n}.
+\]
+
+\section*{Question 3}
+Let
+\[
+\mathbf{x} = m_1 \mathbf{x}_1 + \cdots + m_n \mathbf{x}_n.
+\]
+
+Then,
+\[
+\mathbf{A} \mathbf{x} = m_1 \mathbf{A} \mathbf{x}_1 + \cdots + m_n \mathbf{A} \mathbf{x}_n \implies \mathbf{A} \mathbf{x} = 0.
+\]
+
+In Question 2, we proved that since \(\mathbf{x}\) can be any vector, if \(\mathbf{A} \mathbf{x} = 0\), then \(\mathbf{A} = 0\). Therefore:
+\[
+\mathbf{A} = \mathbf{0}_{m \times n}.
+\]
+
+\section*{Question 4}
+\[
+\mathbf{A} \mathbf{x} = \mathbf{x} \implies \mathbf{A} \mathbf{x} - \mathbf{x} = 0 \implies (\mathbf{A} - 1)\mathbf{x} = 0.
+\]
+
+\[
+\mathbf{A} \mathbf{x} - \mathbf{I}_n \mathbf{x} = 0 \implies (\mathbf{A} - \mathbf{I}_n)\mathbf{x} = 0.
+\]
+
+Based on Question 2, if the above equation holds for every \(\mathbf{x}\), then \(\mathbf{A} - \mathbf{I}_n = 0\).
+
+\[
+\mathbf{A} = \mathbf{I}_n.
+\]
+
+\section*{Question 5}
+Let
+\[
+\mathbf{A} = 
+\begin{bmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 0 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 0
+\end{bmatrix}, \quad
+\mathbf{x} = 
+\begin{bmatrix}
+1 \\
+0 \\
+\vdots \\
+
+0
+\end{bmatrix}.
+\]
+
+Then,
+\[
+\mathbf{A} \mathbf{x} = 
+\begin{bmatrix}
+1 \\
+0 \\
+\vdots \\
+0
+\end{bmatrix}
+= \mathbf{x}.
+\]
+
+\section*{Question 6}
+Given:
+\[
+x_1 \mathbf{a}_1 + \cdots + x_n \mathbf{a}_n = 0 \implies \mathbf{x} = 
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix} = \mathbf{0}.
+\]
+
+Substituting:
+\[
+x_1 \mathbf{a}'_1 + \cdots + x_n \mathbf{a}_n = 0 \implies x_1(\mathbf{a}_1 + \beta \mathbf{a}_2) + \cdots + x_n \mathbf{a}_n = 0.
+\]
+
+\[
+\implies x_1 \mathbf{a}_1 + (x_2 + \beta x_1)\mathbf{a}_2 + \cdots + x_n \mathbf{a}_n = 0.
+\]
+
+Since:
+\[
+x_1 = 0 \implies \beta x_1 = 0.
+\]
+
+And:
+\[
+x_2 = 0.
+\]
+
+Thus:
+\[
+x_2 + \beta x_1 = 0.
+\]
+
+\section*{Question 7}
+\begin{enumerate}
+\item[(a)]
+\[
+\langle \mathbf{A}, \mathbf{B} \rangle = \sum_{i=1}^m \sum_{j=1}^n \mathbf{A}_{ij} \mathbf{B}_{ij}.
+\]
+
+\[
+\text{trace}(\mathbf{S}) = \sum_{i} \mathbf{S}_{ii}.
+\]
+
+Let \( \mathbf{A} \in \mathbb{R}^{m \times n} \) and \( \mathbf{B} \in \mathbb{R}^{n \times t} \), then:
+\[
+\mathbf{C}_{m \times t} = \mathbf{A}_{m \times n} \mathbf{B}_{n \times t}, \quad c_{ij} = \sum_{k=1}^n \mathbf{a}_{ik} \mathbf{b}_{kj}.
+\]
+
+%I
+\[
+\text{(I)} \quad (\mathbf{A}^T \mathbf{B})_{ij} = \sum_{k=1}^m \mathbf{a}_{ki} \mathbf{b}_{kj} \implies \text{trace}(\mathbf{A}^T \mathbf{B}) = 
+\]
+
+\[
+\sum_{i=1}^n \sum_{k=1}^m \mathbf{a}_{ki} \mathbf{b}_{ki} = \sum_{k=1}^m \sum_{i=1}^n \mathbf{a}_{ki} \mathbf{b}_{ki} = \langle \mathbf{A}, \mathbf{B} \rangle.
+\]
+
+%II
+\[
+\text{(II)} \quad (\mathbf{B}^T \mathbf{A})_{ij} = \sum_{k=1}^m \mathbf{b}_{ki} \mathbf{a}_{kj} \implies \text{trace}(\mathbf{B}^T \mathbf{A}) =
+\]
+
+\[
+\sum_{i=1}^n \sum_{k=1}^m \mathbf{b}_{ki} \mathbf{a}_{ki} = \sum_{k=1}^m \sum_{i=1}^n \mathbf{a}_{ki} \mathbf{b}_{ki} = \langle \mathbf{A}, \mathbf{B} \rangle.
+\]
+
+%III
+\[
+\text{(III)} \quad (\mathbf{A} \mathbf{B}^T)_{ij} = \sum_{k=1}^n \mathbf{a}_{ik} \mathbf{b}_{jk} \implies \text{trace}(\mathbf{A} \mathbf{B}^T) =
+\]
+
+\[
+\sum_{i=1}^m \sum_{k=1}^n \mathbf{a}_{ik} \mathbf{b}_{ik} = \langle \mathbf{A}, \mathbf{B} \rangle.
+\]
+
+\item[(b)]
+%IV
+\[
+\text{(IV)} \quad \langle \mathbf{A} \mathbf{B}, \mathbf{C} \rangle \overset{(I)}{=} \text{trace}((\mathbf{A} \mathbf{B})^T \mathbf{C}) = \text{trace}(\mathbf{B}^T \mathbf{A}^T \mathbf{C})
+\]
+
+\[
+= \text{trace}(\mathbf{B}^T (\mathbf{A}^T \mathbf{C})) \overset{(I)}{=} \langle \mathbf{B}, \mathbf{A}^T \mathbf{C} \rangle.
+\]
+
+%V
+\[
+\text{(V)} \quad \langle \mathbf{A} \mathbf{B}, \mathbf{C} \rangle \overset{\text{(III)}}{=} \text{trace}(\mathbf{A} \mathbf{B} \mathbf{C}^T) = \text{trace}(\mathbf{A} (\mathbf{C} \mathbf{B}^T)^T)
+\]
+
+\[
+= \langle \mathbf{A}, \mathbf{C} \mathbf{B}^T \rangle.
+\]
+\end{enumerate}
+
+\section*{Question 8}
+Let
+\[
+\mathbf{A} = 
+\begin{bmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+0 & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & a_{nn}
+\end{bmatrix},
+\]
+where \( \mathbf{A} \) is an upper triangular matrix. We assume \( a_{kk} = 0 \) for \( 1 \leq k \leq n \). Our goal is to prove that there exists a non-zero vector \( \mathbf{x} \) such that \( \mathbf{A} \mathbf{x} = 0 \).
+
+Define:
+\[
+\mathbf{A} = 
+\begin{bmatrix}
+\mathbf{A}_1 & \mathbf{A}_2 \\
+0 & \mathbf{A}_3
+\end{bmatrix}.
+\]
+
+Where \( \mathbf{A}_{3_{11}} = 0 \). 
+
+\[
+\mathbf{A} \mathbf{x} = 0 \implies 
+\begin{bmatrix}
+\mathbf{A}_1 & \mathbf{A}_2 \\
+0 & \mathbf{A}_3
+\end{bmatrix}
+\mathbf{x} = 0 \implies 
+\mathbf{x} = 
+\begin{bmatrix}
+-\mathbf{A}_1^{-1} \mathbf{A}_2 \mathbf{z} \\
+\mathbf{z}
+\end{bmatrix}.
+\]
+
+\[
+\mathbf{A} \mathbf{x} =
+\begin{bmatrix}
+\mathbf{A}_1 & \mathbf{A}_2 \\
+0 & \mathbf{A}_3
+\end{bmatrix}
+\begin{bmatrix}
+-\mathbf{A}_1^{-1} \mathbf{A}_2 \mathbf{z} \\
+\mathbf{z}
+\end{bmatrix}
+=
+\begin{bmatrix}
+-\mathbf{A}_1 \mathbf{A}_1^{-1} \mathbf{A}_2 \mathbf{z} + \mathbf{A}_2 \mathbf{z} \\
+\mathbf{A}_3 \mathbf{z}
+\end{bmatrix}
+=
+\begin{bmatrix}
+-\mathbf{A}_2 \mathbf{z} + \mathbf{A}_2 \mathbf{z} \\
+\mathbf{A}_3 \mathbf{z}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+\mathbf{A}_3 \mathbf{z}
+\end{bmatrix}.
+\]
+
+We can find a \( \mathbf{z} \) where \( \mathbf{A}_3 \mathbf{z} = 0 \).
+
+\section*{Question 9}
+\[
+a (\mathbf{u} + \mathbf{v}) + b (\mathbf{u} + \mathbf{w}) + c (\mathbf{v} + \mathbf{w}) = \mathbf{0}.
+\]
+
+Expanding, we get:
+\[
+(a + b) \mathbf{u} + (a + c) \mathbf{v} + (b + c) \mathbf{w} = \mathbf{0}.
+\]
+
+From this, we have:
+\[
+a + b = 0, \quad a + c = 0, \quad b + c = 0.
+\]
+
+Solving the equations:
+\[
+a + b = 0 \implies a = -b,
+\]
+\[
+a + c = 0 \implies a = -c,
+\]
+\[
+b + c = 0 \implies c = -b.
+\]
+
+Substituting \( c = -b \) into \( a = -c \), we get:
+\[
+a = b.
+\]
+
+Thus, we have:
+\[
+a = b = c = 0.
+\]
+
+\section*{Question 10}
+1. Non-emptiness:  
+   For \( \mathbf{W} \), each vector \( \mathbf{W} \) is a subspace of \( \mathbf{V} \).  
+   \[
+   \mathbf{0} \in \mathbf{W} \implies \forall \mathbf{v} \in \mathbf{W}, \; \mathbf{0} \in \mathcal{M}.
+   \]
+
+2. Closed under addition:  
+   If \( \mathbf{u}, \mathbf{v} \in \mathcal{M} \), then \( \mathbf{u} + \mathbf{v} \in \mathbf{W} \).  
+   \[
+   \forall \mathbf{u}, \mathbf{v} \in \mathbf{W}, \; \mathbf{u} + \mathbf{v} \in \mathcal{M}.
+   \]
+
+3. Closed under scalar multiplication:  
+   Let \( \mathbf{u} \in \mathcal{M} \) and \( c \in \mathbb{F} \) (where \( \mathbb{F} \) is the field over which \( \mathbf{V} \) is defined).  
+   \[
+   \forall \mathbf{u} \in \mathbf{W}, \; c \mathbf{u} \in \mathbf{W}.
+   \]
+
+Since \( \mathbf{W} \) is closed under scalar multiplication:
+\[
+\forall \mathbf{u} \in \mathbf{W}, \; c \mathbf{u} \in \mathcal{M} \implies c \mathbf{u} \in \mathcal{M}.
+\]
+
+
+\end{document}

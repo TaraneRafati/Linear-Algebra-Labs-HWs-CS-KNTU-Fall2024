@@ -1,0 +1,199 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{LA-HW4}
+\author{Zahra Rafati}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section*{Question 1}
+
+\[
+\text{Proj}_{S}(\mathbf{Y}) = \mathtt{P}_S \mathbf{Y}
+\]
+
+\[
+\mathtt{P}_S = \mathtt{U}_c \mathtt{U}_c^T, \quad \text{where } \mathtt{U}_c = [\mathbf{u}_1, \dots, \mathbf{u}_k] \text{ is the basis of } S.
+\]
+
+\[
+\mathbf{y} \in S \quad \implies^{\text{(I)}} \quad \mathbf{y} \in \mathcal{C}(\mathtt{U}_c)
+\]
+
+\[
+\mathtt{P}_S \mathbf{y} \overset{\text{(I)}}{\rightarrow} \mathtt{U}_c \mathtt{U}_c^T \mathbf{y} \quad \overset{\text{(I)}}{=} \mathtt{U}_c \mathbf{U}_c^T \mathbf{U}_c
+\]
+
+\[
+\mathtt{U}_c \text{ is orthonormal.} \quad \rightarrow \quad \mathtt{P}_S \mathbf{y} = \mathbf{y}
+\]
+
+\section*{Question 2}
+
+\[
+S^\perp = \{ \mathbf{y} \in \mathbb{R}^n \mid \mathbf{y}^T \mathbf{x} = 0 \text{ for all } \mathbf{x} \in S \}.
+\]
+
+\[
+\text{(I)} \quad \forall \mathbf{x} \in S, \, \exists \mathbf{0} \in \mathbb{R}^n : \mathbf{0}^T \mathbf{x} = 0 \quad \rightarrow \quad \mathbf{0} \in S^\perp.
+\]
+
+\[
+\text{(II)} \quad \mathbf{y}_1, \mathbf{y}_2 \in S^\perp \quad \rightarrow \quad \mathbf{y}_1^T \mathbf{x} = 0, \, \mathbf{y}_2^T \mathbf{x} = 0, \, \forall \mathbf{x} \in S.
+\]
+
+\[
+(\mathbf{y}_1 + \mathbf{y}_2)^T \mathbf{x} = \mathbf{y}_1^T \mathbf{x} + \mathbf{y}_2^T \mathbf{x} = 0 + 0 = 0 \quad \rightarrow \quad \mathbf{y}_1 + \mathbf{y}_2 \in S^\perp.
+\]
+
+\[
+\quad \rightarrow \quad \text{closed under addition.}
+\]
+
+\[
+\text{(III)} \quad \mathbf{y} \in S^\perp \text{ and } c \in \mathbb{R}.
+\]
+
+\[
+\mathbf{y}^T \mathbf{x} = 0, \, \forall \mathbf{x} \in S.
+\]
+
+\[
+(c \mathbf{y})^T \mathbf{x} = c (\mathbf{y}^T \mathbf{x}) = c(0) = 0 \quad \rightarrow \quad c \mathbf{y} \in S^\perp.
+\]
+
+\[
+\quad \rightarrow \quad \text{closed under scalar multiplication.}
+\]
+
+\[
+\text{(I)}, \, \text{(II)}, \, \text{(III)} \quad \rightarrow \quad S^\perp \text{ is a linear subspace of } \mathbb{R}^n.
+\]
+
+\section*{Question 3}
+
+\[
+\mathbf{x} \in \text{null}(\mathtt{A}) \quad \rightarrow \quad \mathtt{A} \mathbf{x} = \mathbf{0}.
+\]
+
+Orthogonal complement: \( \mathbf{r}_i \perp \mathbf{x}, \, \forall \mathbf{x} \in R(\mathtt{A}) \).
+
+\[
+\mathtt{A} = 
+\begin{bmatrix}
+\mathbf{r}_1^T \\
+\vdots \\
+\mathbf{r}_m^T
+\end{bmatrix}.
+\]
+
+\[
+\mathtt{A} \mathbf{x} = \mathbf{0} \quad \rightarrow \quad \mathbf{r}_1 \mathbf{x} = 0, \dots, \mathbf{r}_m \mathbf{x} = 0
+\]
+
+\[
+\quad \rightarrow \quad \text{null}(\mathtt{A}) \subseteq R(\mathtt{A})^\perp \quad (\text{I}).
+\]
+
+\[
+\dim(\text{null}(\mathtt{A})) + \dim(R(\mathtt{A})) = n
+\]
+
+and
+
+\[
+\dim(R(\mathtt{A})^\perp) = n - \dim(R(\mathtt{A}))
+\]
+
+\[
+\quad \rightarrow \quad \dim(\text{null}(\mathtt{A})) = \dim(R(\mathtt{A})^\perp) \quad (\text{II}).
+\]
+
+\[
+\quad \rightarrow \quad \text{null}(\mathtt{A}) = R(\mathtt{A})^\perp.
+\]
+
+\section*{Question 4}
+
+We know:
+\[
+\mathtt{P}^2 = \mathtt{P}, \quad \mathtt{P}^T = \mathtt{P}.
+\]
+
+\[
+(\mathtt{I} - \mathtt{P})^2 = (\mathtt{I} - \mathtt{P})(\mathtt{I} - \mathtt{P}) = \mathtt{I} - \mathtt{P} - \mathtt{P} + \mathtt{P}^2.
+\]
+
+Since \(\mathtt{P}^2 = \mathtt{P}\):
+\[
+(\mathtt{I} - \mathtt{P})^2 = \mathtt{I} - \mathtt{P}.
+\]
+
+\[
+(\mathtt{I} - \mathtt{P})^T = \mathtt{I}^T - \mathtt{P}^T = \mathtt{I} - \mathtt{P}.
+\]
+
+\[
+\therefore \mathtt{P} \text{ is a projection matrix.}
+\]
+
+Decompose \( \mathbf{v} \):
+\[
+\mathbf{v} = \mathbf{v}_S + \mathbf{v}_S^\perp, \quad \mathtt{P} \mathbf{v} = \mathbf{v}_S.
+\]
+
+\[
+(\mathtt{I} - \mathtt{P}) \mathbf{v} = \mathbf{v} - \mathtt{P} \mathbf{v} = \mathbf{v}_S^\perp \quad \rightarrow \quad (\mathtt{I} - \mathtt{P}) \mathbf{v} \in V_S^\perp.
+\]
+
+\section*{Question 5}
+
+\[
+\mathtt{Q}^T \mathtt{Q} = \mathtt{I}, \quad \mathtt{Q}^T = \mathtt{Q}^{-1}.
+\]
+
+\[
+\text{det}(\mathtt{Q}^T \mathtt{Q}) = \text{det}(\mathtt{I}) = 1.
+\]
+
+\[
+\text{det}(\mathtt{A} \mathtt{B}) = \text{det}(\mathtt{A}) \cdot \text{det}(\mathtt{B}) \quad \rightarrow
+\]
+
+\[
+\text{det}(\mathtt{Q}^T \mathtt{Q}) = \text{det}(\mathtt{Q}^T) \cdot \text{det}(\mathtt{Q}) = 1.
+\]
+
+\[
+\text{det}(\mathtt{Q}^T) = \text{det}(\mathtt{Q}), \quad \text{det}(\mathtt{Q})^2 = 1.
+\]
+
+\[
+\therefore \text{det}(\mathtt{Q}) = \pm 1.
+\]
+
+\section*{Question 6}
+
+\[
+\mathtt{P}^2 = \mathtt{P} \quad \rightarrow \quad \text{det}(\mathtt{P}^2) = \text{det}(\mathtt{P}).
+\]
+
+\[
+\text{det}(\mathtt{P}^2) = \text{det}(\mathtt{P})^2 \quad \rightarrow \quad \text{det}(\mathtt{P})^2 = \text{det}(\mathtt{P}).
+\]
+
+\[
+\text{det}(\mathtt{P})^2 - \text{det}(\mathtt{P}) = 0.
+\]
+
+\[
+\text{det}(\mathtt{P})(\text{det}(\mathtt{P}) - 1) = 0 \quad \rightarrow \quad \text{det}(\mathtt{P}) = 0 \text{ or } 1.
+\]
+
+Geometrical interpretation:
+If the matrix is already in the aimed space, then \(\mathtt{P} = \mathtt{I}\) and \(\text{det}(\mathtt{P}) = 1\).
+
+Otherwise, the column space of the matrix will be dependent, and \(\text{det}(\mathtt{P}) = 0\).
+
+\end{document}
